@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADHD Skolen - Arkitektur for en bedre skolehverdag</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <article>
+    <header>
+      <div class="logo-container">
+        <div id="logo">
+          <div id="circle"></div>
+        </div>
+      </div>
+      <div class="nav-container">
+        <button class="active"><a class="nav-item">Forside</a></button>
+        <button><a class="nav-item" href="project.html">Prosjektet</a></button>
+        <button><a class="nav-item" href="om.html">Om meg</a></button>
+        <button class="nav-item submit-button" onclick="document.getElementById('submission-form').scrollIntoView();">Delta</button>
+      </div>
+    </header>
+    <main>
+      <section class="form-section">
+        <div class="hero-container">
+          <div class="hero-heading">
+            <div class="title">
+              <h2>ADHD Prosjekt</h2>
+            </div>
+            <div class="image">
+              <img alt="Placeholder stock photo" src="https://images.adsttc.com/media/images/5bf1/6900/08a5/e560/3500/02c5/large_jpg/11-%E4%B8%8B%E6%B2%89%E8%88%9E%E5%8F%B0%E6%88%B7%E5%A4%96%E8%AF%BE%E5%A0%82%EF%BC%88The_sunken_stage_area).jpg?1542547698">
+              <div class="push-right">
+                <label>Aktivitetsskole i Bejing, Kina</label>
+              </div>
+            </div>
+          </div>
+          <div class="hero-body">
+            <h3>Masteroppgave våren 2022, AHO</h3>
+            <p>
+              I prosjektet "ADHD skolen" vil jeg se på hvordan vi kan bruke arkitektur og romlige
+              elementer til å forbedre skolehverdagen til barn med oppmerksomhets- og konsentrasjonsvansker
+              i norsk sammenheng. Prosjektet vil plasseres i Oslo og Omegn, på en valgt tomt med mulighet for
+              utsikt og opphold i naturen.
+            </p>
+            <p>
+              Selv er jeg ikke diagnotisert med ADHD, men har flere familiemedlemmer med diagnosen, og har
+              lært hvor vanskelig det kan være å tilpasse seg den norske skolen. Jeg ser etter innspill og
+              refleksjoner som kan veilede prosjektet, og håper å kunne fremme og belyse utfordringene som
+              er forbundet med barn og ungdom med diagnosen ADHD/ADD.
+            </p>
+            <div class="spacer"></div>
+            <h3>Skriv til meg!</h3>
+            <p>
+              Har du har personlig eller indirekte erfaring som barn med ADHD/ADD i den norske skolen?
+              Ditt svar vil kunne hjelpe meg å utforme prosjektet på en møte som kan bidra til
+              oppmerksomhet rundt ADHD som diagnose og livsstil.
+            </p>
+          </div>
+        </div>
+        <form id="submission-form">
+          <div class="checkbox-container">
+            <div class="checkbox-item">
+              <input type="checkbox" class="checkbox-square">
+              <label>Jeg er selv diagnostisert ADHD/ADD</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" class="checkbox-square">
+              <label>Mitt barn/søsken/andre er diagnostisert ADHD</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" class="checkbox-square" checked>
+              <label>Jeg godtar at innholdet kan brukes som del av masteroppgaven</label>
+            </div>
+          </div>
+          <textarea maxlength="none" class="submit-field" name="comment"></textarea>
+          <button class="submit-button">Send inn</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <button id="footer1"><a href="https://www.instagram.com/julianriise/" target="_blank">Instagram</a></button>
+      <button id="footer2"><a href="https://aho.no/no/studietilbud/master-i-arkitektur/oppbygging-av-studiet-oppbygging-av-studiet" target="_blank">AHO</a></button>
+      <button id="footer3"><a href="https://www.forskningsetikk.no/ressurser/fbib/metoder/sporreundersokelser/#contents" target="_blank">Retningslinjer</a></button>
+    </footer>
+  </article>
+</body>
+</html>

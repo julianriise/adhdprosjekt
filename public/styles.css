@@ -1,0 +1,261 @@
+/*--- Typography ---*/
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap);
+h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+h3 {
+  margin-top: 0;
+}
+
+/*--- Root ---*/
+:root {
+  font-family: 'Open Sans', sans-serif, Helvetica, Arial;
+  --primary-foreground: rgb(28,28,30);
+  --primary-background: rgb(242,242,247);
+  --secondary-foreground: rgb(99,99,102);
+  --secondary-background: rgb(199,199,204);
+  --system-red: rgb(255,59,48);
+  --system-orange: rgb(255,149,0);
+  --system-yellow: rgb(255,204,0);
+  --system-green: rgb(52,199,89);
+  --system-mint: rgb(0,199,190);
+  --system-teal: rgb(48,176,199);
+  --system-cyan: rgb(50,173,230);
+  --system-blue: rgb(0,122,255);
+  --system-indigo: rgb(88,86,214);
+  --system-purple: rgb(175,82,222);
+  --system-brown: rgb(162,132,94);
+}
+
+/*--- Page defaults ---*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background: var(--primary-background);
+  background-attachment: fixed;
+  color: var(--primary-foreground);
+}
+
+/*--- Contents ---*/
+header {
+  margin: 8px;
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  grid-template-areas: "logo nav";
+}
+article {
+  height: 100vh;
+  max-width: 720px;
+  margin: auto;
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+}
+main {
+  display: flex;
+  margin: 0 16px;
+}
+
+/*--- Navigation settings ---*/
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-item {
+  min-width: 85px;
+  padding: 4px;
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+}
+.logo-container {
+  display: flex;
+  padding: 4px;
+}
+
+/*--- Hero settings ---*/
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+.hero-heading {
+  margin-bottom: 16px;
+}
+.hero-body {
+  margin: 16px 0;
+}
+.pdf {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  width: 100%;
+  margin: 16px 0;
+  display: flex;
+  justify-content: start;
+}
+
+/*--- Section settings ---*/
+section {
+  width: 100%;
+}
+.form-section {
+  display: grid;
+  grid-template: auto auto / 1fr;
+}
+.project-section {
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 2rem;
+  align-content: start;
+  margin-bottom: 1rem;
+}
+
+/*--- Checkbox settings ---*/
+.checkbox-container {
+  margin: 8px 4px;
+  display: flex;
+  flex-direction: column;
+}
+.checkbox-item {
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+}
+label {
+  padding: 0 4px;
+}
+
+/*--- Form settings ---*/
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+.submit-field {
+  width: 100%;
+  min-height: 200px;
+  background: none;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  color: var(--primary-foreground);
+  border: solid var(--secondary-foreground) 1px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  outline: none;
+  resize: none;
+  display: flex;
+  flex-grow: 1;
+}
+
+/*--- Object properties ---*/
+object {
+  margin-bottom: 2rem;
+}
+
+/*--- Footer settings ---*/
+footer {
+  margin: 16px;
+  padding: 16px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "venstre midten høyre";
+  grid-template-rows: 1fr;
+}
+#footer1 {
+  grid-area: venstre;
+}
+#footer2 {
+  grid-area: midten;
+}
+#footer3 {
+  grid-area: høyre;
+}
+
+/*--- Image properties ---*/
+img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: bottom;
+}
+.image {
+  margin: 16px 0;
+}
+.push-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.cover-image {
+  min-height: 400px;
+  object-fit: contain;
+}
+.profile-image {
+  object-fit: scale-down;
+  position: center;
+}
+.align-left {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: start;
+}
+
+/*--- Logo properties ---*/
+#logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--system-indigo);
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+}
+
+/*--- Button settings ---*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  font-size: 1rem;
+  background: none;
+  color: var(--primary-foreground);
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  color: var(--secondary-foreground)
+}
+.active {
+  color: var(--secondary-foreground);
+}
+.submit-button {
+  width: 100%;
+  color: var(--primary-foreground);
+  background: var(--secondary-background);
+  background: var(--primary-background);
+  border: solid var(--secondary-foreground) 1px;
+  padding: 8px 0;
+}
+.submit-button:hover {
+  color: #f1f1f1;
+  background: var(--secondary-foreground);
+  background: var(--system-indigo);
+}
+
+/*--- Spacer properties---*/
+.spacer {
+  height: 1rem;
+}
