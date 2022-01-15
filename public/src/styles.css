@@ -263,7 +263,9 @@ button:hover {
   background: var(--secondary-foreground);
   background: var(--system-indigo);
 }
-#submit {
+.contact-button {
+  width: auto;
+  padding: 8px 8px;
 }
 .burger-menu {
   background: none;
