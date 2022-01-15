@@ -65,12 +65,21 @@ main {
 
 /*--- Navigation settings ---*/
 .nav-container {
+  margin-right: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+.nav-list {
+  display: none;
+}
+.nav-list.show {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 .nav-item {
-  min-width: 85px;
+  min-width: 75px;
   padding: 4px;
   margin-left: 8px;
   display: flex;
@@ -145,7 +154,7 @@ form {
   flex-direction: column;
   margin-bottom: 32px;
 }
-.submit-field {
+.submission-text {
   width: 100%;
   min-height: 200px;
   background: none;
@@ -254,8 +263,25 @@ button:hover {
   background: var(--secondary-foreground);
   background: var(--system-indigo);
 }
+#submit {
+}
+.burger-menu {
+  background: none;
+  color: var(--primary-foreground);
+}
 
 /*--- Spacer properties---*/
 .spacer {
   height: 1rem;
+}
+
+/*--- Mobile settings---*/
+@media only screen and (min-width: 540px) {
+  .burger-menu {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
 }

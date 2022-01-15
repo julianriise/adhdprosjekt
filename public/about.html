@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADHD Skolen - Om meg</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>ADHD Prosjekt - Om meg</title>
+  <link rel="stylesheet" type="text/css" href="src/styles.css">
+  <!-- Page load Javascript -->
+  <script defer src="src/index.js"></script>
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/c6db5c7a6f.js" crossorigin="anonymous"></script>
+  <!-- Fix browser load issue -->
+  <link rel="shortcut icon" href="#" />
 </head>
 <body>
 <article>
@@ -15,10 +21,15 @@
       </div>
     </div>
     <div class="nav-container">
-      <button><a class="nav-item" href="index.html">Forside</a></button>
-      <button><a class="nav-item" href="project.html">Prosjektet</a></button>
-      <button class="active"><a class="nav-item">Om meg</a></button>
-      <button class="nav-item submit-button"><a href="index.html">Delta</a></button>
+      <div class="nav-list">
+        <button><a class="nav-item" href="index.html">Forside</a></button>
+        <button><a class="nav-item" href="project.html">Prosjekt</a></button>
+        <button class="active"><a class="nav-item">Om meg</a></button>
+        <button class="nav-item submit-button"><a href="index.html">Delta</a></button>
+      </div>
+      <button class="burger-menu" id="burger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
   <main>
@@ -51,7 +62,7 @@
   <footer>
     <button id="footer1"><a href="https://www.instagram.com/julianriise/" target="_blank">Instagram</a></button>
     <button id="footer2"><a href="https://aho.no/no/studietilbud/master-i-arkitektur/oppbygging-av-studiet-oppbygging-av-studiet" target="_blank">AHO</a></button>
-    <button id="footer3"><a href="https://www.forskningsetikk.no/ressurser/fbib/metoder/sporreundersokelser/#contents" target="_blank">Retningslinjer</a></button>
+    <button id="footer3"><a href="https://www.forskningsetikk.no/ressurser/fbib/metoder/sporreundersokelser/#contents" target="_blank">Personvern</a></button>
   </footer>
 </article>
 </body>

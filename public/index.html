@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADHD Skolen - Arkitektur for en bedre skolehverdag</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>ADHD Prosjekt - Arkitektur for en bedre skolehverdag</title>
+  <link rel="stylesheet" type="text/css" href="src/styles.css">
+  <!-- Page load Javascript -->
+  <script defer src="src/index.js"></script>
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/c6db5c7a6f.js" crossorigin="anonymous"></script>
+  <!-- Fix browser load issue -->
+  <link rel="shortcut icon" href="#" />
 </head>
 <body>
   <article>
@@ -15,10 +21,15 @@
         </div>
       </div>
       <div class="nav-container">
-        <button class="active"><a class="nav-item">Forside</a></button>
-        <button><a class="nav-item" href="project.html">Prosjektet</a></button>
-        <button><a class="nav-item" href="om.html">Om meg</a></button>
-        <button class="nav-item submit-button" onclick="document.getElementById('submission-form').scrollIntoView();">Delta</button>
+        <div class="nav-list">
+          <button class="active"><a class="nav-item">Forside</a></button>
+          <button><a class="nav-item" href="project.html">Prosjekt</a></button>
+          <button><a class="nav-item" href="about.html">Om meg</a></button>
+          <button class="nav-item submit-button" onclick="document.getElementById('submission-form').scrollIntoView();">Delta</button>
+        </div>
+        <button class="burger-menu" id="burger-menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </header>
     <main>
@@ -26,7 +37,7 @@
         <div class="hero-container">
           <div class="hero-heading">
             <div class="title">
-              <h2>ADHD Prosjekt</h2>
+              <h2>Arkitektur og ADHD</h2>
             </div>
             <div class="image">
               <img alt="Placeholder stock photo" src="https://images.adsttc.com/media/images/5bf1/6900/08a5/e560/3500/02c5/large_jpg/11-%E4%B8%8B%E6%B2%89%E8%88%9E%E5%8F%B0%E6%88%B7%E5%A4%96%E8%AF%BE%E5%A0%82%EF%BC%88The_sunken_stage_area).jpg?1542547698">
@@ -36,52 +47,51 @@
             </div>
           </div>
           <div class="hero-body">
-            <h3>Masteroppgave våren 2022, AHO</h3>
+            <h3>Masteroppgave på AHO</h3>
             <p>
-              I prosjektet "ADHD skolen" vil jeg se på hvordan vi kan bruke arkitektur og romlige
-              elementer til å forbedre skolehverdagen til barn med oppmerksomhets- og konsentrasjonsvansker
-              i norsk sammenheng. Prosjektet vil plasseres i Oslo og Omegn, på en valgt tomt med mulighet for
-              utsikt og opphold i naturen.
+              Det har skjedd overraskende lite i utformingen av den norske skolen, og mange barn og unge
+              opplever at de faller utenfor normen for en forventer av 'skoleeleven'.
             </p>
             <p>
-              Selv er jeg ikke diagnotisert med ADHD, men har flere familiemedlemmer med diagnosen, og har
-              lært hvor vanskelig det kan være å tilpasse seg den norske skolen. Jeg ser etter innspill og
-              refleksjoner som kan veilede prosjektet, og håper å kunne fremme og belyse utfordringene som
-              er forbundet med barn og ungdom med diagnosen ADHD/ADD.
+              Jeg ser etter innspill og refleksjoner som kan veilede prosjektet, og håper å kunne
+              fremme og belyse utfordringene som er forbundet med barn og ungdom med diagnosen ADHD/ADD.
             </p>
             <div class="spacer"></div>
             <h3>Skriv til meg!</h3>
             <p>
-              Har du har personlig eller indirekte erfaring som barn med ADHD/ADD i den norske skolen?
-              Ditt svar vil kunne hjelpe meg å utforme prosjektet på en møte som kan bidra til
-              oppmerksomhet rundt ADHD som diagnose og livsstil.
+              Har du har direkte eller indirekte erfaring som å være skoleelev med ADHD/ADD i den
+              norske skolen? Dine erfaringer vil hjelpe meg å belyse utfordringene som ligger til
+              ADHD/ADD-diagnosen, og finne nye løsninger som er tilrettelagt for alle barn og unge!
             </p>
           </div>
         </div>
-        <form id="submission-form">
+        <form id="submission-form" action="https://formsubmit.co/julian.riise@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="ADHD Prosjekt">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://adhdprosjekt.no/thank.html">
           <div class="checkbox-container">
             <div class="checkbox-item">
-              <input type="checkbox" class="checkbox-square">
+              <input class="checkbox-square" type="checkbox" name="personal">
               <label>Jeg er selv diagnostisert ADHD/ADD</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" class="checkbox-square">
+              <input class="checkbox-square" type="checkbox" name="other">
               <label>Mitt barn/søsken/andre er diagnostisert ADHD</label>
             </div>
             <div class="checkbox-item">
-              <input type="checkbox" class="checkbox-square" checked>
+              <input type="checkbox" class="checkbox-square" name="Approved for publication" checked>
               <label>Jeg godtar at innholdet kan brukes som del av masteroppgaven</label>
             </div>
           </div>
-          <textarea maxlength="none" class="submit-field" name="comment"></textarea>
-          <button class="submit-button">Send inn</button>
+          <textarea class="submission-text" maxlength="none" name="Response" placeholder="Skriv her..."></textarea>
+          <button class="submit-button" id="submit" type="submit">Send inn</button>
         </form>
       </section>
     </main>
     <footer>
       <button id="footer1"><a href="https://www.instagram.com/julianriise/" target="_blank">Instagram</a></button>
       <button id="footer2"><a href="https://aho.no/no/studietilbud/master-i-arkitektur/oppbygging-av-studiet-oppbygging-av-studiet" target="_blank">AHO</a></button>
-      <button id="footer3"><a href="https://www.forskningsetikk.no/ressurser/fbib/metoder/sporreundersokelser/#contents" target="_blank">Retningslinjer</a></button>
+      <button id="footer3"><a href="https://www.forskningsetikk.no/ressurser/fbib/metoder/sporreundersokelser/#contents" target="_blank">Personvern</a></button>
     </footer>
   </article>
 </body>
