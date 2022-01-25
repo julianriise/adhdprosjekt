@@ -204,6 +204,11 @@ img {
 .image {
   margin: 16px 0;
 }
+.square-image {
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 .push-right {
   display: flex;
   justify-content: flex-end;
